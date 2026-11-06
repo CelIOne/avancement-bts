@@ -1,0 +1,136 @@
+path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed,completion_date
+#01 - Physiopathologie -  Introduction physiopathologie- BTS D&N - Bloc 5,2026-06-26T14:01:24.000,100,99,6259,TRUE,2026-09-25T08:44:54.000
+#02 - Physiopathologie - Dénutrition - BTS Diététique - Bloc 5,2026-06-26T14:01:24.000,31,67,10714,FALSE,
+#03 - Physiopathologie -  L'obésité - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,0,,0,FALSE,
+#04 - Physiopathologie -  Le syndrome métabolique - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,0,,0,FALSE,
+#05 - Physiopathologie -  Le diabète - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,0,,0,FALSE,
+#06 - Physiopathologie -  Les dyslipidémies - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,0,,0,FALSE,
+#07 - Physiopathologie -  Les pathologies de l'appareil cardio vasculaire - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,0,,0,FALSE,
+#08 - Physiopathologie -  Anomalies du métabolisme de l’acide urique - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,0,,0,FALSE,
+#09 - Physiopathologie -  Maladies métaboliques congénitales - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,0,,0,FALSE,
+#10 - Physiopathologie -  Les pathologies endocriniennes - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,0,,0,FALSE,
+#11 - Physiopathologie -  Les pathologies cancéreuses - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,0,,0,FALSE,
+#12 - Physiopathologie -  Les Pathologies digestives hautes - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,0,,0,FALSE,
+#13 - Physiopathologie -  Les pathologies gastriques - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,0,,0,FALSE,
+#14 - Physiopathologie -  Les pathologies intestinales - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,0,,0,FALSE,
+#15 - Physiopathologie - Les MICI - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,0,,0,FALSE,
+#16 - Physiopathologie -  Pathologies pancréatiques - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,0,,0,FALSE,
+#17 - Physiopathologie -  Pathologies hépatiques - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,0,,0,FALSE,
+#18 - Physiopathologie -  Les allergies et intolérances - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,0,,0,FALSE,
+#19 - Physiopathologie - Les pathologies de l'appareil urinaire - BTS D&N - Bloc 5,2026-06-26T14:01:28.000,0,,0,FALSE,
+#20 - Physiopathologie -  Pathologies du système nerveux- BTS D&N - Bloc 5,2026-06-26T14:01:28.000,0,,0,FALSE,
+#21 - Physiopathologie -  Les pathologies respiratoire - BTS D&N - Bloc 5,2026-06-26T14:01:28.000,0,,0,FALSE,
+#22 - Physiopathologie - Les anémies - BTS D&N - Bloc 5,2026-06-26T14:01:28.000,0,,0,FALSE,
+#23 - Physiopathologie - Troubles du comportement alimentaire- BTS D&N - Bloc 5,2026-06-26T14:01:28.000,0,,0,FALSE,
+#24 - Physiopathologie - Ressources stages thérapeutiques - Pathologies de la femme enceinte - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#25 - Physiopathologie - Ressources stages thérapeutiques - Pathologie de la personne âgée - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#26 - Physiopathologie - Ressources stages thérapeutiques - Pathologies pédiatriques - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#27 - Physiopathologie - Ressources stages thérapeutiques - Pathologies ostéo-articulaires - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#28 - Physiopathologie - Ressources stages thérapeutiques - Les autres pathologies respiratoire - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#29 - Physiopathologie - Ressources stages thérapeutiques - Les pathologies spécifiques - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#30 - Physiopathologie - Réaliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,0,,0,FALSE,
+#01 - Physiologie - Introduction à la physiologie - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,100,74,1283,TRUE,2026-09-09T09:01:10.000
+#02 - Physiologie - Biologie cellulaire - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,100,82,22051,TRUE,2026-09-25T13:27:36.000
+#03 - Physiologie - Histologie - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,10,61,2752,FALSE,
+#04 - Physiologie - Le milieu interieur - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,0,,0,FALSE,
+#05 - Physiologie - Le système nerveux - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,0,,0,FALSE,
+#06 - Physiologie - Le système endocrinien - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,0,,0,FALSE,
+#07 - Physiologie - Le système circulatoire - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,0,,0,FALSE,
+#08 - Physiologie - Le système digestif - BTS D&N - Bloc 5,2026-06-26T14:01:22.000,0,,0,FALSE,
+#09 - Physiologie - Le système urinaire - BTS D&N - Bloc 5,2026-06-26T14:01:22.000,0,,0,FALSE,
+#10 - Physiologie - Le système respiratoire - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,0,,0,FALSE,
+#11 - Physiologie - Les adaptations physiologiques - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,0,,0,FALSE,
+#12 - Physiologie - Le système immunitaire - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,0,,0,FALSE,
+#13 - Physiologie -  Les xénobiotiques - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,0,,0,FALSE,
+#14 - Physiologie - Le système reproducteur - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,0,,0,FALSE,
+#15 - Physiologie - Réaliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,3,,2228,FALSE,
+#01 - Nutrition - Introduction à la nutrition - BTS D&N - Bloc 2,2026-06-26T14:01:16.000,100,90,17377,TRUE,2026-09-15T15:26:38.000
+#02 - Nutrition - Besoins nutritionnel de l'adulte - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,100,99,39670,TRUE,2026-10-21T16:10:23.000
+#03 - Nutrition - Besoins nutritionnels des enfants et ados - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,0,,0,FALSE,
+#04 - Nutrition - Besoins nutritionnels des sportifs - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,0,,0,FALSE,
+#05 - Nutrition - Besoins nutritionnels des personnes âgées - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,0,,0,FALSE,
+#06 - Nutrition - Besoins nutritionnels des femmes enceintes et allaitantes - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,0,,0,FALSE,
+#07 - Nutrition - La nutrition et le travail - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,0,,0,FALSE,
+#08 - Nutrition - Le végétarisme - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,0,,0,FALSE,
+#09 - Nutrition - Réaliser les exercices - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,21,,2479,FALSE,
+#01 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:18.000,100,93,10149,TRUE,2026-08-24T07:37:51.000
+#02 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,100,3281,TRUE,2026-08-26T15:48:25.000
+#03 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,94,5855,TRUE,2026-09-01T08:42:42.000
+#04 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,99,5504,TRUE,2026-09-01T12:21:08.000
+#05 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,100,1480,TRUE,2026-09-02T08:31:26.000
+#06 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,91,268,TRUE,2026-11-06T08:31:26.001
+#07 - Environnement professionnel - Culture managériale - BTS D&N,2026-06-26T14:01:20.000,100,91,268,TRUE,2026-11-06T08:31:26.001
+#08 - Environnement professionnel - Culture juridique - BTS D&N,2026-06-26T14:01:20.000,100,91,268,TRUE,2026-11-06T08:31:26.001
+#09 - Environnement professionnel - Éléments de gestion - BTS D&N,2026-06-26T14:01:20.000,100,91,268,TRUE,2026-11-06T08:31:26.001
+#10 - Environnement professionnel - Numérique en santé - BTS D&N,2026-06-26T14:01:20.000,100,91,268,TRUE,2026-11-06T08:31:26.001
+#11 - Environnement professionnel - Exercice professionnel en santé - BTS D&N,2026-06-26T14:01:20.000,0,,0,FALSE,
+#12 - Environnement professionnel - Promotion et éducation pour la santé publique - BTS D&N,2026-06-26T14:01:20.000,0,,0,FALSE,
+#13 - Environnement professionnel - Recherche et veille - BTS D&N,2026-06-26T14:01:20.000,0,,0,FALSE,
+#14 - Environnement professionnel - Stages - BTS D&N,2026-06-26T14:01:21.000,39,,5510,FALSE,
+#01 - ETP - Introduction à l'ETP - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#02 - ETP - Bases de la relation éducative - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#03 - ETP - Analyser les besoins et attentes du patient - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#04 - ETP - Construire un programme ETP - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#05 - ETP - Techniques d’animation et outils pédagogiques - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#06 - ETP - Communication interprofessionnelle - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#07 - ETP - Évaluer une action d’ETP - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,0,,0,FALSE,
+#08 - ETP - Mises en situation pratiques - BTS D&N - Bloc 3,2026-06-26T14:01:26.000,0,,0,FALSE,
+#09 - ETP - Réaliser les exercices - BTS D&N - Bloc 3,2026-06-26T14:01:26.000,0,,0,FALSE,
+#01 - Diététique thérapeutique - Introduction à la diététique thérapeutique - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,100,94,9950,TRUE,2026-09-15T08:14:48.000
+#02 - Diététique thérapeutique - Alimentations thérapeutiques courantes - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,50,86,9708,FALSE,
+#03 - Diététique thérapeutique - Alimentations thérapeutiques - Dénutrition - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,0,,0,FALSE,
+#04 - Diététique thérapeutique - Alimentations thérapeutiques - Obésité - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,0,,0,FALSE,
+#05 - Diététique thérapeutique - Alimentations thérapeutiques - Diabète - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,0,,0,FALSE,
+#06 - Diététique thérapeutique - Alimentations thérapeutiques - Dyslipidémies - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,0,,0,FALSE,
+#07 - Diététique thérapeutique - Alimentations thérapeutiques - Maladies cardiovasculaires - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,0,,0,FALSE,
+#08 - Diététique thérapeutique - Alimentations thérapeutiques - Maladies métaboliques congénitales - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,0,,0,FALSE,
+#09 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies digestives hautes et ORL - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,0,,0,FALSE,
+#10 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies gastriques - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,0,,0,FALSE,
+#11 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies intestinales - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,0,,0,FALSE,
+#12 - Diététique thérapeutique - Alimentations thérapeutiques - MICI - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,0,,0,FALSE,
+#13 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies pancréatiques - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,0,,0,FALSE,
+#14 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies hépatiques - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,0,,0,FALSE,
+#15 - Diététique thérapeutique - Alimentations thérapeutiques - Allergies et intolérances - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,0,,0,FALSE,
+#16 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies rénales - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,0,,0,FALSE,
+#17 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies respiratoires - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,0,,0,FALSE,
+#18 - Diététique thérapeutique - Alimentations thérapeutiques - Oncologie - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,0,,0,FALSE,
+#19 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies spécifiques - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,0,,0,FALSE,
+#20 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies de la grossesse - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,0,,0,FALSE,
+#21 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies de la personne âgée - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,0,,0,FALSE,
+#22 - Diététique thérapeutique - Alimentations thérapeutiques - Pathologies pédiatriques - BTS D&N - Bloc 1,2026-06-26T14:01:19.000,0,,0,FALSE,
+#23 - Diététique thérapeutique - Réaliser les exercices - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,3,,3370,FALSE,
+#01 - Biochimie - Introduction à la biochimie - BTS D&N - Bloc 5,2026-06-26T14:01:17.000,100,100,670,TRUE,2026-07-16T07:25:30.000
+#02 - Biochimie - Biochimie structurale - BTS D&N - Bloc 5,2026-06-26T14:01:17.000,33,86,46035,FALSE,
+#03 - Biochimie - Biochimie métabolique - BTS D&N - Bloc 5,2026-06-26T14:01:18.000,0,,0,FALSE,
+#04 - Biochimie - Métabolisme des glucides - BTS D&N - Bloc 5,2026-06-26T14:01:18.000,0,,0,FALSE,
+#05 - Biochimie - Métabolisme des lipides - BTS D&N - Bloc 5,2026-06-26T14:01:19.000,0,,0,FALSE,
+#06 - Biochimie - Métabolisme azoté - BTS D&N - Bloc 5,2026-06-26T14:01:19.000,0,,0,FALSE,
+#07 - Biochimie - Métabolisme de l'alcool- BTS D&N - Bloc 5,2026-06-26T14:01:20.000,0,,0,FALSE,
+#08 - Biochimie - Réaliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,4,,1591,FALSE,
+#01 - Atelier de cuisine - Concevoir et réaliser des ateliers culinaires - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,99,5440,TRUE,2026-09-02T12:38:21.000
+#02 - Atelier de cuisine - Technique de dégustation - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,98,747,TRUE,2026-09-02T13:19:40.000
+#03 - Atelier de cuisine - Le matériel - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,0,,0,FALSE,
+#04 - Atelier de cuisine - Techniques culinaires - La préparation des fruits et légumes - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,0,,0,FALSE,
+#05 - Atelier de cuisine - Techniques culinaires - Les différents types de liaisons - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,0,,0,FALSE,
+#06 - Atelier de cuisine - Techniques culinaires - Les différents types de pâtes - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,0,,0,FALSE,
+#07 - Atelier de cuisine - Techniques culinaires - Les différents modes de cuisson - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,0,,0,FALSE,
+#08 - Atelier de cuisine - Techniques culinaires - Les différentes techniques autres - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,0,,0,FALSE,
+#09 - Atelier de cuisine - Techniques culinaires - Les différentes techniques autres - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,0,,0,FALSE,
+#10 - Atelier de cuisine - Techniques culinaires - Les différentes techniques autres - BTS D&N - Bloc 3,2026-06-26T14:01:17.000,0,,0,FALSE,
+#11 - Atelier de cuisine - Réaliser les exercices - BTS D&N - Bloc 3,2026-06-26T14:01:17.000,0,,0,FALSE,
+#00 - Vos premiers pas dans la formation - BTS D&N,2026-06-26T14:01:16.000,100,50,3652,TRUE,2026-11-05T12:09:02.000
+#01 - Remise à niveau en chimie générale - BTS D&N - Bloc 5,2026-06-26T14:01:16.000,100,87,21419,TRUE,2026-07-07T06:17:42.000
+#01 - Aliments - La réglementation alimentaire - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,100,97,9670,TRUE,2026-09-03T09:20:50.000
+#02 - Aliments - Sécurité sanitaire - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,100,93,50968,TRUE,2026-09-29T11:26:39.000
+#03 - Aliments - Les familles d'aliments - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,100,400,TRUE,2026-09-29T11:33:59.000
+#04 - Aliments - Les produits laitiers - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,100,15879,TRUE,2026-10-19T16:18:36.000
+#05 - Aliments - VPO - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,10,50,1933,FALSE,
+#06 - Aliments - Les corps gras - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
+"#07 - Aliments - Tubercules, légumineuses et soja - BTS D&N - Bloc 2",2026-06-26T14:01:19.000,0,,0,FALSE,
+#08 - Aliments - Les céréales - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
+#09 - Aliments - Les fruits et légumes - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
+#10 - Aliments - Les produits sucrés - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
+#11 - Aliments - Les boissons - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
+#12 - Aliments - Les autres aliments - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
+#13 - Aliments - Alimentation durable - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
+#14 - Aliments - Réaliser les exercices - BTS D&N - Bloc 2,2026-06-26T14:01:21.000,25,,22418,FALSE,

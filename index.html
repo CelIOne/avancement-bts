@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<title>Batterie BTS D&N</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: iOS 26 liquid glass. Pastel gradient wallpaper, large pill-radius panels with a bright light-catching rim, flat pastel batteries and icons. */
+:root {
+  --bg: #F8F5FB;
+  --fg: #1F1B3D;
+  --muted: #6A6690;
+  --blue: #4D7CFF;
+  --green: #7FDDA8;
+  --glass: rgba(255, 255, 255, 0.65);
+  --glass-solid: #EFEBFA;
+  --rim-hi: rgba(255, 255, 255, 0.95);
+  --rim-lo: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 14px 44px rgba(110, 90, 180, 0.20), 0 2px 6px rgba(110, 90, 180, 0.08);
+  --sep: rgba(60, 50, 120, 0.12);
+  --well: rgba(255, 255, 255, 0.45);
+  --ink: #2A2250;
+  --seg-on: #FFFFFF;
+  --darken: 58%;
+  --w1: #FCFBFF; --w2: #F8F4FF; --w3: #FEF3F7; --w4: #FFF8F0;
+  --b1: rgb(143 184 255 / 0.25); --b2: rgb(255 166 205 / 0.22); --b3: rgb(190 160 245 / 0.22); --b4: rgb(150 225 215 / 0.18);
+  --k0: #7FDDA8; --k1: #FFB98A; --k2: #FF9DB8; --k3: #C8A2F0; --k4: #8ED8F5;
+  --k5: #8FB4FF; --k6: #A9A6F5; --k7: #7FE0D8; --k8: #FFD97A;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17142B; --fg: #F4F1FF; --muted: #ADA9CF; --blue: #8FB0FF; --green: #7FDDA8;
+    --glass: rgba(255, 255, 255, 0.08); --glass-solid: #25213F; --rim-hi: rgba(255, 255, 255, 0.55); --rim-lo: rgba(255, 255, 255, 0.06);
+    --glass-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+    --sep: rgba(255, 255, 255, 0.12); --well: rgba(255, 255, 255, 0.12); --ink: #FFFFFF; --darken: 0%; --seg-on: #3C3766;
+    --w1: #232A55; --w2: #2B2054; --w3: #44214A; --w4: #3B2531;
+    --b1: rgb(107 140 255 / 0.40); --b2: rgb(255 120 175 / 0.32); --b3: rgb(165 120 255 / 0.38); --b4: rgb(90 200 190 / 0.22);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17142B; --fg: #F4F1FF; --muted: #ADA9CF; --blue: #8FB0FF; --green: #7FDDA8;
+  --glass: rgba(255, 255, 255, 0.08); --glass-solid: #25213F; --rim-hi: rgba(255, 255, 255, 0.55); --rim-lo: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --sep: rgba(255, 255, 255, 0.12); --well: rgba(255, 255, 255, 0.12); --ink: #FFFFFF; --darken: 0%; --seg-on: #3C3766;
+  --w1: #232A55; --w2: #2B2054; --w3: #44214A; --w4: #3B2531;
+  --b1: rgb(107 140 255 / 0.40); --b2: rgb(255 120 175 / 0.32); --b3: rgb(165 120 255 / 0.38); --b4: rgb(90 200 190 / 0.22);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.35 var(--font); -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding-block: 44px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+/* wallpaper */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(48% 42% at 10% 6%, var(--b1), transparent 72%),
+    radial-gradient(44% 40% at 94% 30%, var(--b2), transparent 72%),
+    radial-gradient(50% 44% at 22% 96%, var(--b3), transparent 72%),
+    radial-gradient(40% 36% at 88% 96%, var(--b4), transparent 72%),
+    linear-gradient(150deg, var(--w1) 0%, var(--w2) 38%, var(--w3) 72%, var(--w4) 100%);
+}
+main { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+h1 { margin: 0 0 2px 6px; font-size: clamp(34px, 8vw, 48px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; }
+h3 { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+
+/* liquid glass: soft translucent body, light-catching rim on opposite corners */
+.global, .tools, .course, .panel {
+  position: relative;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(30px) saturate(170%);
+  backdrop-filter: blur(30px) saturate(170%);
+  box-shadow: inset 0 1px 1px var(--rim-hi), inset 0 -1px 1px color-mix(in srgb, var(--rim-hi) 40%, transparent), var(--glass-shadow);
+}
+.global::before, .tools::before, .course::before, .panel::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, var(--rim-hi), var(--rim-lo) 28%, var(--rim-lo) 72%, var(--rim-hi));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .global, .tools, .course, .panel { background: var(--glass-solid); }
+}
+
+/* battery: pill, flat pastel fill */
+.bat {
+  --h: 26px; --pad: 3px;
+  position: relative; height: var(--h); margin-right: 9px;
+  border-radius: 999px; padding: var(--pad); background: var(--well);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--rim-hi) 80%, transparent), inset 0 2px 5px rgba(80, 60, 140, 0.10);
+}
+.bat::after {
+  content: ""; position: absolute; right: -7px; top: 50%; transform: translateY(-50%);
+  width: 4px; height: 36%; background: color-mix(in srgb, var(--muted) 55%, transparent);
+  border-radius: 0 3px 3px 0;
+}
+.bat-fill {
+  height: 100%; border-radius: 999px; min-width: 0;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--c, var(--green)), #fff 30%), var(--c, var(--green)));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.bat.big { --h: 62px; --pad: 5px; }
+.bat.big::after { width: 7px; right: -12px; border-radius: 0 5px 5px 0; }
+.bat.big .bat-fill { background-image: linear-gradient(90deg, #8ED8F5, #A9A6F5, #E4A6EC, #FF9DB8, #FFB98A); }
+
+/* global widget */
+.global { border-radius: 38px; padding: 26px 26px 30px; display: grid; gap: 20px; }
+.eyebrow { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.bignum { font-size: clamp(68px, 17vw, 96px); font-weight: 700; letter-spacing: -0.045em; line-height: 0.95; display: flex; align-items: baseline; gap: 4px; }
+.bignum small { font-size: 0.38em; color: var(--muted); font-weight: 600; letter-spacing: 0; }
+.global .top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.facts { margin: 0; color: var(--muted); font-size: 15px; max-width: 24ch; text-align: right; }
+.facts b { color: var(--fg); font-weight: 600; }
+@media (max-width: 520px) { .facts { text-align: left; max-width: none; } }
+
+/* controls */
+.tools { border-radius: 30px; display: flex; flex-direction: column; }
+.tools .line { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 22px; min-height: 52px; }
+.tools .line + .line { border-top: 0.5px solid var(--sep); }
+.link { color: var(--blue); font: inherit; font-weight: 500; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+.switch { appearance: none; -webkit-appearance: none; width: 51px; height: 31px; border-radius: 16px; background: var(--well); position: relative; cursor: pointer; flex: none; margin: 0; transition: background .25s; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rim-hi) 70%, transparent), inset 0 1px 4px rgba(80, 60, 140, 0.12); }
+.switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; border-radius: 50%; background: #fff; box-shadow: 0 2px 8px rgba(70, 50, 130, .28); transition: transform .25s cubic-bezier(.3,.7,.2,1); }
+.switch:checked { background: var(--green); }
+.switch:checked::after { transform: translateX(20px); }
+input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.link:focus-visible, .switch:focus-visible, summary:focus-visible { outline: 3px solid color-mix(in srgb, var(--blue) 50%, transparent); outline-offset: 2px; border-radius: 10px; }
+
+/* courses */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; align-items: start; }
+.course {
+  --c: var(--k0);
+  --ct: color-mix(in srgb, var(--c), var(--ink) var(--darken));
+  background: linear-gradient(155deg, color-mix(in srgb, var(--c) 22%, transparent), transparent 62%), var(--glass);
+  border-radius: 34px; padding: 18px 20px 8px; min-width: 0;
+  display: flex; flex-direction: column; gap: 13px;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .course { background: linear-gradient(155deg, color-mix(in srgb, var(--c) 20%, var(--glass-solid)), var(--glass-solid) 62%); }
+}
+.course.hors { --c: #B8B5CF; }
+.course .head { display: flex; align-items: center; gap: 12px; }
+.icon {
+  width: 40px; height: 40px; border-radius: 13px; flex: none; color: var(--ink);
+  display: grid; place-items: center; font-size: 13.5px; font-weight: 700;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--c), #fff 32%), var(--c));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 6px 16px color-mix(in srgb, var(--c) 35%, transparent);
+}
+.course h3 { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.course .p { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; color: var(--ct); }
+.course .p small { font-size: 0.55em; font-weight: 600; margin-left: 1px; }
+.meta { margin: 0; color: var(--muted); font-size: 14px; }
+details summary {
+  list-style: none; cursor: pointer; color: var(--blue); font-weight: 500; font-size: 15px;
+  padding: 12px 0; border-top: 0.5px solid var(--sep); display: flex; justify-content: space-between; align-items: center;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after {
+  content: ""; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg); margin-right: 4px; transition: transform .25s;
+}
+details[open] summary::after { transform: rotate(45deg); }
+.plist { display: flex; flex-direction: column; }
+.row { padding: 12px 0; border-top: 0.5px solid var(--sep); display: grid; gap: 8px; min-width: 0; }
+.row .top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.row .name { min-width: 0; overflow-wrap: anywhere; font-size: 15px; line-height: 1.3; }
+.row .name .n { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 6px; font-size: 13px; }
+.row .pc { font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; color: var(--muted); }
+.row.done .pc { color: var(--ct); }
+.row .bot { display: flex; align-items: center; gap: 10px; }
+.mini { flex: 1; height: 7px; border-radius: 999px; background: var(--well); overflow: hidden; }
+.mini > i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, color-mix(in srgb, var(--c), #fff 30%), var(--c)); }
+.st { font-size: 12px; font-weight: 500; white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: var(--well); color: var(--muted); }
+.st.go { background: color-mix(in srgb, var(--c) 22%, transparent); color: var(--ct); }
+.st.ok { background: color-mix(in srgb, var(--c) 42%, transparent); color: var(--ct); }
+.foot { color: var(--muted); font-size: 13px; padding: 0 8px; margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .bat-fill { transition: width .8s cubic-bezier(.3,.7,.2,1); } }
+@media (prefers-reduced-motion: reduce) { .switch, .switch::after, details summary::after { transition: none; } }
+
+/* history and comparison */
+h2 { margin: 14px 0 0 6px; font-size: clamp(24px, 6vw, 30px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+.panel { border-radius: 34px; padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.phead { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.phead h3 { font-size: 19px; }
+.seg { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--well); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rim-hi) 60%, transparent); }
+.seg button { font: inherit; font-size: 14px; font-weight: 500; color: var(--muted); background: none; border: 0; padding: 6px 15px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--seg-on); color: var(--fg); box-shadow: 0 1px 5px rgba(70, 50, 130, 0.18); }
+.seg button:focus-visible { outline: 3px solid color-mix(in srgb, var(--blue) 50%, transparent); outline-offset: 2px; }
+#chart { width: 100%; min-width: 0; }
+#chart svg { display: block; overflow: visible; font-family: var(--font); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; padding: 4px 12px 4px 9px; border-radius: 999px; background: var(--well); }
+.chip i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.sel {
+  appearance: none; -webkit-appearance: none; font: inherit; font-size: 15px; font-weight: 500; color: var(--fg);
+  background-color: var(--well); border: 0; border-radius: 999px; padding: 8px 34px 8px 15px; cursor: pointer; max-width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1.5 1.5l4.5 4.5 4.5-4.5' fill='none' stroke='%238A86B0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rim-hi) 70%, transparent);
+}
+.sel:disabled { opacity: 0.55; cursor: default; }
+.sel:focus-visible { outline: 3px solid color-mix(in srgb, var(--blue) 50%, transparent); outline-offset: 2px; }
+.sel option { color: #1F1B3D; background: #fff; }
+.cmpbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--muted); }
+.cmpsum { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.cmpnum { font-size: clamp(46px, 12vw, 68px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; display: flex; align-items: baseline; gap: 6px; }
+.cmpnum small { font-size: 0.34em; color: var(--muted); font-weight: 600; letter-spacing: 0; }
+.crow { --c: var(--k0); --ct: color-mix(in srgb, var(--c), var(--ink) var(--darken)); display: flex; align-items: center; gap: 10px 12px; flex-wrap: wrap; padding: 11px 0; border-top: 0.5px solid var(--sep); }
+.crow .icon { width: 32px; height: 32px; border-radius: 10px; font-size: 12px; }
+.crow .nm { flex: 1 1 150px; min-width: 0; overflow-wrap: anywhere; font-size: 15px; font-weight: 500; }
+.crow .ab { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.delta { font-size: 13px; font-weight: 600; padding: 3px 11px; border-radius: 999px; white-space: nowrap; font-variant-numeric: tabular-nums; background: color-mix(in srgb, var(--c) 40%, transparent); color: var(--ct); }
+.delta.zero { background: var(--well); color: var(--muted); }
+.newly { padding: 9px 0; border-top: 0.5px solid var(--sep); font-size: 14.5px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: space-between; }
+.newly span:last-child { color: var(--muted); }
+
+</style>
+
+</head>
+<body>
+<main>
+  <h1>Avancement BTS Diététique</h1>
+
+  <section class="global" aria-label="Avancement global" id="global"></section>
+
+  <div class="tools">
+    <div class="line">
+      <label for="snap">Mois affiché</label>
+      <select id="snap" class="sel"></select>
+    </div>
+    <div class="line">
+      <label for="hors">Inclure les parcours hors cours</label>
+      <input type="checkbox" class="switch" id="hors" role="switch">
+    </div>
+    <div class="line">
+      <label class="link" for="csv" tabindex="0" id="csvlabel">Prévisualiser un fichier</label>
+      <input type="file" id="csv" accept=".csv,text/csv">
+    </div>
+  </div>
+
+  <section class="grid" id="courses" aria-label="Avancement par cours"></section>
+
+  <p class="foot" id="stamp"></p>
+
+  <h2>Historique</h2>
+  <section class="panel" id="history" aria-label="Évolution de l'avancement"></section>
+  <section class="panel" id="compare" aria-label="Comparaison de deux mois"></section>
+</main>
+
+<script>
+const CSV_DEFAULT = "path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed,completion_date\n#01 - Physiopathologie -  Introduction physiopathologie- BTS D&N - Bloc 5,2026-06-26T14:01:24.000,100,99,6259,TRUE,2026-09-25T08:44:54.000\n#02 - Physiopathologie - D\u00e9nutrition - BTS Di\u00e9t\u00e9tique - Bloc 5,2026-06-26T14:01:24.000,,67,10714,TRUE,2026-11-06T12:00:00.000\n#03 - Physiopathologie -  L'ob\u00e9sit\u00e9 - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,,,0,FALSE,\n#04 - Physiopathologie -  Le syndrome m\u00e9tabolique - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,,,0,FALSE,\n#05 - Physiopathologie -  Le diab\u00e8te - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,,,0,FALSE,\n#06 - Physiopathologie -  Les dyslipid\u00e9mies - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,,,0,FALSE,\n#07 - Physiopathologie -  Les pathologies de l'appareil cardio vasculaire - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,,,0,FALSE,\n#08 - Physiopathologie -  Anomalies du m\u00e9tabolisme de l\u2019acide urique - BTS D&N - Bloc 5,2026-06-26T14:01:25.000,,,0,FALSE,\n#09 - Physiopathologie -  Maladies m\u00e9taboliques cong\u00e9nitales - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,,,0,FALSE,\n#10 - Physiopathologie -  Les pathologies endocriniennes - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,,,0,FALSE,\n#11 - Physiopathologie -  Les pathologies canc\u00e9reuses - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,,,0,FALSE,\n#12 - Physiopathologie -  Les Pathologies digestives hautes - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,,,0,FALSE,\n#13 - Physiopathologie -  Les pathologies gastriques - BTS D&N - Bloc 5,2026-06-26T14:01:26.000,,,0,FALSE,\n#14 - Physiopathologie -  Les pathologies intestinales - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,,,0,FALSE,\n#15 - Physiopathologie - Les MICI - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,,,0,FALSE,\n#16 - Physiopathologie -  Pathologies pancr\u00e9atiques - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,,,0,FALSE,\n#17 - Physiopathologie -  Pathologies h\u00e9patiques - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,,,0,FALSE,\n#18 - Physiopathologie -  Les allergies et intol\u00e9rances - BTS D&N - Bloc 5,2026-06-26T14:01:27.000,,,0,FALSE,\n#19 - Physiopathologie - Les pathologies de l'appareil urinaire - BTS D&N - Bloc 5,2026-06-26T14:01:28.000,,,0,FALSE,\n#20 - Physiopathologie -  Pathologies du syst\u00e8me nerveux- BTS D&N - Bloc 5,2026-06-26T14:01:28.000,,,0,FALSE,\n#21 - Physiopathologie -  Les pathologies respiratoire - BTS D&N - Bloc 5,2026-06-26T14:01:28.000,,,0,FALSE,\n#22 - Physiopathologie - Les an\u00e9mies - BTS D&N - Bloc 5,2026-06-26T14:01:28.000,,,0,FALSE,\n#23 - Physiopathologie - Troubles du comportement alimentaire- BTS D&N - Bloc 5,2026-06-26T14:01:28.000,,,0,FALSE,\n#24 - Physiopathologie - Ressources stages th\u00e9rapeutiques - Pathologies de la femme enceinte - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#25 - Physiopathologie - Ressources stages th\u00e9rapeutiques - Pathologie de la personne \u00e2g\u00e9e - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#26 - Physiopathologie - Ressources stages th\u00e9rapeutiques - Pathologies p\u00e9diatriques - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#27 - Physiopathologie - Ressources stages th\u00e9rapeutiques - Pathologies ost\u00e9o-articulaires - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#28 - Physiopathologie - Ressources stages th\u00e9rapeutiques - Les autres pathologies respiratoire - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#29 - Physiopathologie - Ressources stages th\u00e9rapeutiques - Les pathologies sp\u00e9cifiques - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#30 - Physiopathologie - R\u00e9aliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:29.000,,,0,FALSE,\n#01 - Physiologie - Introduction \u00e0 la physiologie - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,100,74,1283,TRUE,2026-09-09T09:01:10.000\n#02 - Physiologie - Biologie cellulaire - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,100,82,22051,TRUE,2026-09-25T13:27:36.000\n#03 - Physiologie - Histologie - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,,61,2752,TRUE,2026-11-06T12:00:00.000\n#04 - Physiologie - Le milieu interieur - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,,,0,FALSE,\n#05 - Physiologie - Le syst\u00e8me nerveux - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,,,0,FALSE,\n#06 - Physiologie - Le syst\u00e8me endocrinien - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,,,0,FALSE,\n#07 - Physiologie - Le syst\u00e8me circulatoire - BTS D&N - Bloc 5,2026-06-26T14:01:21.000,,,0,FALSE,\n#08 - Physiologie - Le syst\u00e8me digestif - BTS D&N - Bloc 5,2026-06-26T14:01:22.000,,,0,FALSE,\n#09 - Physiologie - Le syst\u00e8me urinaire - BTS D&N - Bloc 5,2026-06-26T14:01:22.000,,,0,FALSE,\n#10 - Physiologie - Le syst\u00e8me respiratoire - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,,,0,FALSE,\n#11 - Physiologie - Les adaptations physiologiques - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,,,0,FALSE,\n#12 - Physiologie - Le syst\u00e8me immunitaire - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,,,0,FALSE,\n#13 - Physiologie -  Les x\u00e9nobiotiques - BTS D&N - Bloc 5,2026-06-26T14:01:23.000,,,0,FALSE,\n#14 - Physiologie - Le syst\u00e8me reproducteur - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,,,0,FALSE,\n#15 - Physiologie - R\u00e9aliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,,,2228,TRUE,2026-11-06T12:00:00.000\n#01 - Nutrition - Introduction \u00e0 la nutrition - BTS D&N - Bloc 2,2026-06-26T14:01:16.000,100,90,17377,TRUE,2026-09-15T15:26:38.000\n#02 - Nutrition - Besoins nutritionnel de l'adulte - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,100,99,39670,TRUE,2026-10-21T16:10:23.000\n#03 - Nutrition - Besoins nutritionnels des enfants et ados - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,,,0,FALSE,\n#04 - Nutrition - Besoins nutritionnels des sportifs - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,,,0,FALSE,\n#05 - Nutrition - Besoins nutritionnels des personnes \u00e2g\u00e9es - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,,,0,FALSE,\n#06 - Nutrition - Besoins nutritionnels des femmes enceintes et allaitantes - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,,,0,FALSE,\n#07 - Nutrition - La nutrition et le travail - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,,,0,FALSE,\n#08 - Nutrition - Le v\u00e9g\u00e9tarisme - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,,,0,FALSE,\n#09 - Nutrition - R\u00e9aliser les exercices - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,,,2479,TRUE,2026-11-06T12:00:00.000\n#01 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:18.000,100,93,10149,TRUE,2026-08-24T07:37:51.000\n#02 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,100,3281,TRUE,2026-08-26T15:48:25.000\n#03 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,94,5855,TRUE,2026-09-01T08:42:42.000\n#04 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,99,5504,TRUE,2026-09-01T12:21:08.000\n#05 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,100,100,1480,TRUE,2026-09-02T08:31:26.000\n#06 - Environnement professionnel - Exercice professionnel en restauration collective - BTS D&N,2026-06-26T14:01:19.000,,91,268,TRUE,2026-11-06T12:00:00.000\n#07 - Environnement professionnel - Culture manag\u00e9riale - BTS D&N,2026-06-26T14:01:20.000,,91,268,TRUE,2026-11-06T12:00:00.000\n#08 - Environnement professionnel - Culture juridique - BTS D&N,2026-06-26T14:01:20.000,,91,268,TRUE,2026-11-06T12:00:00.000\n#09 - Environnement professionnel - \u00c9l\u00e9ments de gestion - BTS D&N,2026-06-26T14:01:20.000,,91,268,TRUE,2026-11-06T12:00:00.000\n#10 - Environnement professionnel - Num\u00e9rique en sant\u00e9 - BTS D&N,2026-06-26T14:01:20.000,,91,268,TRUE,2026-11-06T12:00:00.000\n#11 - Environnement professionnel - Exercice professionnel en sant\u00e9 - BTS D&N,2026-06-26T14:01:20.000,,,0,FALSE,\n#12 - Environnement professionnel - Promotion et \u00e9ducation pour la sant\u00e9 publique - BTS D&N,2026-06-26T14:01:20.000,,,0,FALSE,\n#13 - Environnement professionnel - Recherche et veille - BTS D&N,2026-06-26T14:01:20.000,,,0,FALSE,\n#14 - Environnement professionnel - Stages - BTS D&N,2026-06-26T14:01:21.000,,,5510,TRUE,2026-11-06T12:00:00.000\n#01 - ETP - Introduction \u00e0 l'ETP - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,100,,0,FALSE,2026-10-31T12:00:00.000\n#02 - ETP - Bases de la relation \u00e9ducative - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,,,0,FALSE,\n#03 - ETP - Analyser les besoins et attentes du patient - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,,,0,FALSE,\n#04 - ETP - Construire un programme ETP - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,,,0,FALSE,\n#05 - ETP - Techniques d\u2019animation et outils p\u00e9dagogiques - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,,,0,FALSE,\n#06 - ETP - Communication interprofessionnelle - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,,,0,FALSE,\n#07 - ETP - \u00c9valuer une action d\u2019ETP - BTS D&N - Bloc 3,2026-06-26T14:01:25.000,,,0,FALSE,\n#08 - ETP - Mises en situation pratiques - BTS D&N - Bloc 3,2026-06-26T14:01:26.000,,,0,FALSE,\n#09 - ETP - R\u00e9aliser les exercices - BTS D&N - Bloc 3,2026-06-26T14:01:26.000,,,0,FALSE,\n#01 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Introduction \u00e0 la di\u00e9t\u00e9tique th\u00e9rapeutique - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,100,94,9950,TRUE,2026-09-15T08:14:48.000\n#02 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques courantes - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,,86,9708,TRUE,2026-11-06T12:00:00.000\n#03 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - D\u00e9nutrition - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,,,0,FALSE,\n#04 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Ob\u00e9sit\u00e9 - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,,,0,FALSE,\n#05 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Diab\u00e8te - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,,,0,FALSE,\n#06 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Dyslipid\u00e9mies - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,,,0,FALSE,\n#07 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Maladies cardiovasculaires - BTS D&N - Bloc 1,2026-06-26T14:01:23.000,,,0,FALSE,\n#08 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Maladies m\u00e9taboliques cong\u00e9nitales - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,,,0,FALSE,\n#09 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies digestives hautes et ORL - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,,,0,FALSE,\n#10 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies gastriques - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,,,0,FALSE,\n#11 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies intestinales - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,,,0,FALSE,\n#12 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - MICI - BTS D&N - Bloc 1,2026-06-26T14:01:22.000,,,0,FALSE,\n#13 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies pancr\u00e9atiques - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,,,0,FALSE,\n#14 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies h\u00e9patiques - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,,,0,FALSE,\n#15 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Allergies et intol\u00e9rances - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,,,0,FALSE,\n#16 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies r\u00e9nales - BTS D&N - Bloc 1,2026-06-26T14:01:21.000,,,0,FALSE,\n#17 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies respiratoires - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,,,0,FALSE,\n#18 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Oncologie - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,,,0,FALSE,\n#19 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies sp\u00e9cifiques - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,,,0,FALSE,\n#20 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies de la grossesse - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,,,0,FALSE,\n#21 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies de la personne \u00e2g\u00e9e - BTS D&N - Bloc 1,2026-06-26T14:01:20.000,,,0,FALSE,\n#22 - Di\u00e9t\u00e9tique th\u00e9rapeutique - Alimentations th\u00e9rapeutiques - Pathologies p\u00e9diatriques - BTS D&N - Bloc 1,2026-06-26T14:01:19.000,,,0,FALSE,\n#23 - Di\u00e9t\u00e9tique th\u00e9rapeutique - R\u00e9aliser les exercices - BTS D&N - Bloc 1,2026-06-26T14:01:24.000,,,3370,TRUE,2026-11-06T12:00:00.000\n#01 - Biochimie - Introduction \u00e0 la biochimie - BTS D&N - Bloc 5,2026-06-26T14:01:17.000,100,100,670,TRUE,2026-07-16T07:25:30.000\n#02 - Biochimie - Biochimie structurale - BTS D&N - Bloc 5,2026-06-26T14:01:17.000,,86,46035,TRUE,2026-11-06T12:00:00.000\n#03 - Biochimie - Biochimie m\u00e9tabolique - BTS D&N - Bloc 5,2026-06-26T14:01:18.000,,,0,FALSE,\n#04 - Biochimie - M\u00e9tabolisme des glucides - BTS D&N - Bloc 5,2026-06-26T14:01:18.000,,,0,FALSE,\n#05 - Biochimie - M\u00e9tabolisme des lipides - BTS D&N - Bloc 5,2026-06-26T14:01:19.000,,,0,FALSE,\n#06 - Biochimie - M\u00e9tabolisme azot\u00e9 - BTS D&N - Bloc 5,2026-06-26T14:01:19.000,,,0,FALSE,\n#07 - Biochimie - M\u00e9tabolisme de l'alcool- BTS D&N - Bloc 5,2026-06-26T14:01:20.000,,,0,FALSE,\n#08 - Biochimie - R\u00e9aliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,,,1591,TRUE,2026-11-06T12:00:00.000\n#01 - Atelier de cuisine - Concevoir et r\u00e9aliser des ateliers culinaires - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,99,5440,TRUE,2026-09-02T12:38:21.000\n#02 - Atelier de cuisine - Technique de d\u00e9gustation - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,98,747,TRUE,2026-09-02T13:19:40.000\n#03 - Atelier de cuisine - Le mat\u00e9riel - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,,,0,FALSE,\n#04 - Atelier de cuisine - Techniques culinaires - La pr\u00e9paration des fruits et l\u00e9gumes - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,,,0,FALSE,\n#05 - Atelier de cuisine - Techniques culinaires - Les diff\u00e9rents types de liaisons - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,,,0,FALSE,\n#06 - Atelier de cuisine - Techniques culinaires - Les diff\u00e9rents types de p\u00e2tes - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,,,0,FALSE,\n#07 - Atelier de cuisine - Techniques culinaires - Les diff\u00e9rents modes de cuisson - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,,,0,FALSE,\n#08 - Atelier de cuisine - Techniques culinaires - Les diff\u00e9rentes techniques autres - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,,,0,FALSE,\n#09 - Atelier de cuisine - Techniques culinaires - Les diff\u00e9rentes techniques autres - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,,,0,FALSE,\n#10 - Atelier de cuisine - Techniques culinaires - Les diff\u00e9rentes techniques autres - BTS D&N - Bloc 3,2026-06-26T14:01:17.000,,,0,FALSE,\n#11 - Atelier de cuisine - R\u00e9aliser les exercices - BTS D&N - Bloc 3,2026-06-26T14:01:17.000,,,0,FALSE,\n#00 - Vos premiers pas dans la formation - BTS D&N,2026-06-26T14:01:16.000,,50,3652,TRUE,2026-11-05T12:09:02.000\n#01 - Remise \u00e0 niveau en chimie g\u00e9n\u00e9rale - BTS D&N - Bloc 5,2026-06-26T14:01:16.000,100,87,21419,TRUE,2026-07-07T06:17:42.000\n#01 - Aliments - La r\u00e9glementation alimentaire - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,100,97,9670,TRUE,2026-09-03T09:20:50.000\n#02 - Aliments - S\u00e9curit\u00e9 sanitaire - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,100,93,50968,TRUE,2026-09-29T11:26:39.000\n#03 - Aliments - Les familles d'aliments - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,,100,400,TRUE,2026-09-29T11:33:59.000\n#04 - Aliments - Les produits laitiers - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,,100,15879,TRUE,2026-10-19T16:18:36.000\n#05 - Aliments - VPO - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,,50,1933,TRUE,2026-11-06T12:00:00.000\n#06 - Aliments - Les corps gras - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,,,0,FALSE,\n\"#07 - Aliments - Tubercules, l\u00e9gumineuses et soja - BTS D&N - Bloc 2\",2026-06-26T14:01:19.000,,,0,FALSE,\n#08 - Aliments - Les c\u00e9r\u00e9ales - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,,,0,FALSE,\n#09 - Aliments - Les fruits et l\u00e9gumes - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,,,0,FALSE,\n#10 - Aliments - Les produits sucr\u00e9s - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,,,0,FALSE,\n#11 - Aliments - Les boissons - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,,,0,FALSE,\n#12 - Aliments - Les autres aliments - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,,,0,FALSE,\n#13 - Aliments - Alimentation durable - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,,,0,FALSE,\n#14 - Aliments - R\u00e9aliser les exercices - BTS D&N - Bloc 2,2026-06-26T14:01:21.000,,,22418,TRUE,2026-11-06T12:00:00.000\n";
+
+const COURSES = [
+  ["nutrition", "Nutrition", "Nu"], ["aliments", "Aliments", "Al"], ["physiologie", "Physiologie", "Ph"],
+  ["physiopathologie", "Physiopathologie", "Pa"], ["etp", "ETP", "ET"],
+  ["environnement professionnel", "Environnement professionnel", "En"],
+  ["biochimie", "Biochimie", "Bi"], ["dietetique therapeutique", "Diététique thérapeutique", "Di"],
+  ["atelier de cuisine", "Atelier de cuisine", "At"]
+];
+const HORS = "Hors cours";
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+
+function parseCSV(t) {
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if (q) { if (c === '"') { if (t[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && t[i + 1] === "\n") i++; row.push(f); f = ""; if (row.length > 1 || row[0]) rows.push(row); row = []; }
+    else f += c;
+  }
+  if (f || row.length) { row.push(f); rows.push(row); }
+  return rows;
+}
+
+function load(text) {
+  const rows = parseCSV(text.replace(/^﻿/, "")).slice(1);
+  const out = [];
+  for (const r of rows) {
+    const title = (r[0] || "").trim();
+    const m = title.match(/^#(\d+)\s*-\s*([\s\S]*)$/);
+    if (!m) continue;
+    const num = m[1], rest = m[2], nr = norm(rest);
+    if (/^bts mg.*anglais/.test(nr)) continue;
+    const hit = COURSES.find(([k]) => nr.startsWith(k));
+    const label = (hit ? rest.slice(hit[0].length) : rest)
+      .replace(/^\s*-\s*/, "").replace(/\s*-?\s*BTS\b[\s\S]*$/i, "").replace(/\s+/g, " ").trim();
+    const prog = Math.max(0, Math.min(100, parseFloat(r[2]) || 0));
+    const finished = (r[5] || "").trim().toLowerCase() === "true" || prog >= 100;
+    out.push({
+      title, num, label, course: hit ? hit[1] : HORS,
+      sub: (r[1] || "").slice(0, 10),
+      progress: finished ? 100 : prog,
+      completed: finished,
+      done: (r[6] || "").slice(0, 10)
+    });
+  }
+  return out;
+}
+
+/* ---------- reconstitution mensuelle d'après completion_date ---------- */
+const todayStr = () => new Date().toISOString().slice(0, 10);
+const monthLabel = key => new Date(key + "-15T12:00:00").toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+const monthShort = (key, y) => new Date(key + "-15T12:00:00").toLocaleDateString("fr-FR", y ? { month: "short", year: "2-digit" } : { month: "short" });
+const lastDay = key => { const [y, m] = key.split("-").map(Number); return new Date(Date.UTC(y, m, 0)).toISOString().slice(0, 10); };
+
+let RAW = load(CSV_DEFAULT);
+let SNAPS = [], sel = "", includeHors = false, chartMode = "global", cmpA = null, cmpB = null, loadNote = "", undated = 0;
+const openSet = new Set();
+
+function buildSnaps(items) {
+  const today = todayStr();
+  const dones = items.filter(p => p.completed && p.done).map(p => p.done);
+  const start = [...items.map(p => p.sub).filter(Boolean), ...dones].sort()[0] || today;
+  const end = [today, ...dones].sort().pop();
+  const endKey = end.slice(0, 7), keys = [];
+  let [y, m] = start.slice(0, 7).split("-").map(Number);
+  for (;;) {
+    const k = `${y}-${String(m).padStart(2, "0")}`;
+    keys.push(k);
+    if (k >= endKey) break;
+    if (++m > 12) { m = 1; y++; }
+  }
+  const years = new Set(keys.map(k => k.slice(0, 4))).size > 1;
+  undated = items.filter(p => p.completed && !p.done && p.course !== HORS).length;
+  return keys.map((k, i) => {
+    const cur = i === keys.length - 1, limit = lastDay(k);
+    const derived = items.map(p => {
+      const c = p.completed && (p.done ? p.done <= limit : cur);
+      return { ...p, completed: c, progress: c ? 100 : 0, done: c ? p.done : "" };
+    });
+    return { key: k, label: monthLabel(k), short: monthShort(k, years),
+      title: cur ? `${monthLabel(k)} (en cours)` : `fin ${monthLabel(k)}`, items: derived, live: cur ? items : null };
+  });
+}
+function reset(items) {
+  RAW = items; SNAPS = buildSnaps(items);
+  sel = SNAPS[SNAPS.length - 1].key; cmpA = cmpB = null;
+}
+
+const snapBy = k => SNAPS.find(s => s.key === k);
+const courseNames = () => { const n = COURSES.map(c => c[1]); if (includeHors) n.push(HORS); return n; };
+const groupsOf = items => courseNames().map(n => [n, items.filter(p => p.course === n).sort((a, b) => a.num.localeCompare(b.num))]).filter(g => g[1].length);
+const allOf = items => groupsOf(items).flatMap(g => g[1]);
+const colorIdx = n => COURSES.findIndex(c => c[1] === n);
+const colorOf = n => { const i = colorIdx(n); return i >= 0 ? `color-mix(in srgb, var(--k${i}) 80%, var(--ink))` : "#B8B5CF"; };
+
+function agg(list) {
+  let S = 0, done = 0, going = 0;
+  for (const p of list) {
+    S += p.progress;
+    if (p.completed) done++; else if (p.progress > 0) going++;
+  }
+  return { pct: list.length ? S / list.length : 0, done, going, n: list.length };
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const battery = (pct, big) => {
+  const bs = big && pct > 0 ? `;background-size:${(10000 / pct).toFixed(1)}% 100%` : "";
+  return `<div class="bat${big ? " big" : ""}" role="img" aria-label="${Math.round(pct)} pour cent"><div class="bat-fill" style="width:${pct.toFixed(2)}%${bs}"></div></div>`;
+};
+const fmtDate = d => d ? new Date(d + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "";
+const num1 = v => v.toFixed(1).replace(".", ",");
+const fmtPts = d => (d < 0 ? "−" : "+") + num1(Math.abs(d));
+
+function render() {
+  if (!SNAPS.length) return;
+  const snap = snapBy(sel) || SNAPS[SNAPS.length - 1];
+  sel = snap.key;
+  const sn = document.getElementById("snap");
+  sn.innerHTML = SNAPS.slice().reverse().map(s => `<option value="${s.key}"${s.key === sel ? " selected" : ""}>${esc(s.title)}</option>`).join("");
+  sn.disabled = SNAPS.length < 2;
+
+  const items = snap.live || snap.items;
+  const groups = groupsOf(items);
+  const all = groups.flatMap(g => g[1]);
+  const g = agg(all);
+
+  document.getElementById("global").innerHTML = `
+    <div class="eyebrow">Avancement global · ${esc(snap.title)}</div>
+    <div class="top">
+      <div class="bignum">${Math.round(g.pct)}<small>%</small></div>
+      <p class="facts"><b>${g.done} parcours terminés</b> sur ${g.n}${g.going ? `, ${g.going} en cours` : ""}</p>
+    </div>
+    ${battery(g.pct, true)}`;
+
+  document.getElementById("courses").innerHTML = groups.map(([name, list]) => {
+    const a = agg(list);
+    const ci = colorIdx(name);
+    const rows = list.map(p => {
+      const st = p.completed ? "Terminé" : p.progress > 0 ? "En cours" : "Pas commencé";
+      return `<div class="row${p.completed ? " done" : ""}">
+        <div class="top"><span class="name"><span class="n">#${p.num}</span>${esc(p.label)}</span><span class="pc">${Math.round(p.progress)} %</span></div>
+        <div class="bot"><div class="mini"><i style="width:${p.progress}%"></i></div><span class="st ${p.completed ? "ok" : p.progress > 0 ? "go" : ""}">${st}</span></div>
+      </div>`;
+    }).join("");
+    const style = ci >= 0 ? ` style="--c:var(--k${ci})"` : "";
+    const abbr = ci >= 0 ? COURSES[ci][2] : "·";
+    return `<article class="course${ci < 0 ? " hors" : ""}"${style}>
+      <div class="head"><span class="icon" aria-hidden="true">${abbr}</span><h3>${esc(name)}</h3><span class="p">${Math.round(a.pct)}<small>%</small></span></div>
+      ${battery(a.pct, false)}
+      <p class="meta">${a.done} terminé${a.done > 1 ? "s" : ""} sur ${a.n} parcours${a.going ? `, ${a.going} en cours` : ""}</p>
+      <details data-c="${esc(name)}"${openSet.has(name) ? " open" : ""}><summary>Détail des parcours</summary><div class="plist">${rows}</div></details>
+    </article>`;
+  }).join("");
+
+  const last = all.filter(p => p.done).map(p => p.done).sort().pop();
+  const parts = [];
+  if (snap.live) { if (last) parts.push("Dernier parcours terminé le " + fmtDate(last) + "."); }
+  else parts.push("État reconstitué d'après les dates de fin des parcours.");
+  if (undated) parts.push(`${undated} parcours terminé${undated > 1 ? "s" : ""} sans date de fin ${undated > 1 ? "sont comptés" : "est compté"} dans le mois en cours.`);
+  document.getElementById("stamp").textContent = parts.join(" ");
+
+  renderHistory();
+  renderCompare();
+}
+
+/* ---------- historique ---------- */
+function seriesData() {
+  if (chartMode === "global") {
+    return [{ name: "Global", c: "color-mix(in srgb, var(--k6) 70%, var(--ink))", w: 3.4, area: true,
+      pts: SNAPS.map(s => { const it = allOf(s.items); return it.length ? agg(it).pct : null; }) }];
+  }
+  return courseNames().map(n => ({ name: n, c: colorOf(n), w: 2.6,
+    pts: SNAPS.map(s => { const it = s.items.filter(p => p.course === n); return it.length ? agg(it).pct : null; }) }))
+    .filter(s => s.pts.some(v => v != null));
+}
+
+function renderHistory() {
+  const ser = chartMode === "courses" ? seriesData() : [];
+  const legend = chartMode === "courses"
+    ? `<div class="legend">${ser.map(s => `<span class="chip" style="--c:${s.c}"><i></i>${esc(s.name)}</span>`).join("")}</div>` : "";
+  document.getElementById("history").innerHTML = `
+    <div class="phead"><h3>Évolution</h3>
+      <div class="seg" role="group" aria-label="Type de courbe">
+        <button type="button" data-m="global" aria-pressed="${chartMode === "global"}">Global</button>
+        <button type="button" data-m="courses" aria-pressed="${chartMode === "courses"}">Par cours</button>
+      </div></div>
+    <div id="chart"></div>${legend}
+    <p class="meta">Courbe calculée sur les parcours terminés, mois par mois, d'après leur date de fin.${loadNote ? " " + esc(loadNote) : ""}</p>`;
+  drawChart();
+}
+
+function drawChart() {
+  const box = document.getElementById("chart");
+  if (!box || !SNAPS.length) return;
+  const W = Math.max(260, Math.floor(box.clientWidth) || 600), H = 240, L = 42, R = 24, T = 14, B = 32;
+  const ser = seriesData();
+  const vals = ser.flatMap(s => s.pts.filter(v => v != null));
+  const mx = Math.max(10, ...vals);
+  const raw = mx * 1.2, step = raw <= 20 ? 5 : raw <= 50 ? 10 : 25, yMax = Math.ceil(raw / step) * step;
+  const iw = W - L - R, ih = H - T - B, n = SNAPS.length;
+  const X = i => n === 1 ? L + iw / 2 : L + (i / (n - 1)) * iw;
+  const Y = v => T + ih - (v / yMax) * ih;
+  let out = "";
+  for (let v = 0; v <= yMax; v += step) {
+    out += `<line x1="${L}" x2="${W - R}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="var(--sep)" stroke-width="1"/>` +
+      `<text x="${L - 8}" y="${(Y(v) + 4).toFixed(1)}" text-anchor="end" fill="var(--muted)" font-size="11">${v}%</text>`;
+  }
+  const idx = n <= 8 ? SNAPS.map((_, i) => i) : [...new Set([0, 1, 2, 3, 4, 5].map(k => Math.round(k * (n - 1) / 5)))];
+  for (const i of idx) {
+    out += `<text x="${X(i).toFixed(1)}" y="${H - 8}" text-anchor="middle" fill="var(--muted)" font-size="11">${esc(SNAPS[i].short)}</text>`;
+  }
+  for (const s of ser) {
+    const pts = s.pts.map((v, i) => v == null ? null : [X(i), Y(v), v, i]);
+    const real = pts.filter(Boolean);
+    let d = "";
+    for (const p of real) d += (d ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1);
+    if (s.area && real.length > 1) {
+      out += `<path d="${d}L${real[real.length - 1][0].toFixed(1)} ${Y(0).toFixed(1)}L${real[0][0].toFixed(1)} ${Y(0).toFixed(1)}Z" fill="${s.c}" fill-opacity="0.16"/>`;
+    }
+    if (real.length > 1) out += `<path d="${d}" fill="none" stroke="${s.c}" stroke-width="${s.w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+    for (const p of real) {
+      out += `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="${s.w + 1.6}" fill="${s.c}" stroke="var(--seg-on)" stroke-width="2"><title>${esc(s.name)} · ${esc(SNAPS[p[3]].label)} : ${num1(p[2])} %</title></circle>`;
+    }
+  }
+  box.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Courbe d'avancement mois par mois">${out}</svg>`;
+}
+
+/* ---------- comparaison ---------- */
+function renderCompare() {
+  const el = document.getElementById("compare");
+  if (SNAPS.length < 2) {
+    el.innerHTML = `<div class="phead"><h3>Comparer deux mois</h3></div>
+      <p class="meta">La comparaison apparaît dès que le fichier couvre deux mois.</p>`;
+    return;
+  }
+  if (!snapBy(cmpA)) cmpA = SNAPS[SNAPS.length - 2].key;
+  if (!snapBy(cmpB)) cmpB = SNAPS[SNAPS.length - 1].key;
+  let a = snapBy(cmpA), b = snapBy(cmpB);
+  if (a.key > b.key) [a, b] = [b, a];
+  const opts = v => SNAPS.map(s => `<option value="${s.key}"${s.key === v ? " selected" : ""}>${esc(s.title)}</option>`).join("");
+  const bar = `<div class="phead"><h3>Comparer deux mois</h3></div>
+    <div class="cmpbar"><span>De</span><select id="cmpA" class="sel" aria-label="Mois de départ">${opts(cmpA)}</select>
+    <span>à</span><select id="cmpB" class="sel" aria-label="Mois d'arrivée">${opts(cmpB)}</select></div>`;
+  if (a.key === b.key) { el.innerHTML = bar + `<p class="meta">Choisis deux mois différents.</p>`; return; }
+
+  const ia = allOf(a.items), ib = allOf(b.items);
+  const dg = agg(ib).pct - agg(ia).pct;
+  const mapA = new Map(a.items.map(p => [p.title, p]));
+  const newly = ib.filter(p => p.completed && !((mapA.get(p.title) || {}).completed));
+  const rows = groupsOf(b.items).map(([name, items]) => {
+    const pa = agg(a.items.filter(p => p.course === name)).pct, pb = agg(items).pct, d = pb - pa;
+    const ci = colorIdx(name);
+    const style = ci >= 0 ? `--c:var(--k${ci})` : "--c:#B8B5CF";
+    return `<div class="crow" style="${style}"><span class="icon" aria-hidden="true">${ci >= 0 ? COURSES[ci][2] : "·"}</span>
+      <span class="nm">${esc(name)}</span><span class="ab">${Math.round(pa)} % → ${Math.round(pb)} %</span>
+      <span class="delta${Math.abs(d) < 0.05 ? " zero" : ""}">${Math.abs(d) < 0.05 ? "stable" : fmtPts(d) + " pts"}</span></div>`;
+  }).join("");
+  const list = newly.length ? `<details><summary>Parcours terminés sur la période (${newly.length})</summary>
+    ${newly.map(p => `<div class="newly"><span><b style="font-weight:500">#${p.num}</b> ${esc(p.label)}</span><span>${esc(p.course)}</span></div>`).join("")}</details>` : "";
+  el.innerHTML = bar + `
+    <div class="cmpsum"><div><div class="eyebrow">Progression globale · ${esc(a.short)} → ${esc(b.short)}</div>
+      <div class="cmpnum">${fmtPts(dg)}<small>pts</small></div></div>
+      <p class="facts"><b>${newly.length} parcours terminé${newly.length > 1 ? "s" : ""}</b> sur la période</p></div>
+    <div>${rows}</div>${list}`;
+}
+
+/* ---------- événements ---------- */
+document.getElementById("courses").addEventListener("toggle", e => {
+  const c = e.target.dataset && e.target.dataset.c;
+  if (c) e.target.open ? openSet.add(c) : openSet.delete(c);
+}, true);
+document.addEventListener("change", e => {
+  const id = e.target.id;
+  if (id === "snap") { sel = e.target.value; render(); }
+  else if (id === "cmpA") { cmpA = e.target.value; renderCompare(); }
+  else if (id === "cmpB") { cmpB = e.target.value; renderCompare(); }
+});
+document.addEventListener("click", e => {
+  const m = e.target.closest && e.target.closest("[data-m]");
+  if (m) { chartMode = m.dataset.m; renderHistory(); }
+});
+document.getElementById("hors").addEventListener("change", e => { includeHors = e.target.checked; render(); });
+document.getElementById("csv").addEventListener("change", e => {
+  const f = e.target.files && e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    const items = load(String(r.result));
+    if (!items.length) return;
+    reset(items); loadNote = "Aperçu d'un fichier local, non enregistré."; render();
+  };
+  r.readAsText(f);
+});
+document.getElementById("csvlabel").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); document.getElementById("csv").click(); } });
+window.addEventListener("resize", drawChart);
+
+async function fetchFirst(urls) {
+  for (const u of urls) {
+    try { const r = await fetch(u, { cache: "no-store" }); if (r.ok) return r; } catch (e) { /* essai suivant */ }
+  }
+  return null;
+}
+async function loadData() {
+  try {
+    const res = await fetchFirst(["data/analytics.csv", "analytics.csv"]);
+    if (!res) { loadNote = "Le fichier analytics.csv est introuvable dans le dépôt : les données intégrées à la page sont affichées."; renderHistory(); return; }
+    const items = load(await res.text());
+    if (!items.length) { loadNote = "Le fichier analytics.csv est vide ou illisible : les données intégrées à la page sont affichées."; renderHistory(); return; }
+    loadNote = ""; reset(items); render();
+  } catch (e) { loadNote = "Lecture de analytics.csv impossible : les données intégrées à la page sont affichées."; renderHistory(); }
+}
+
+reset(RAW);
+render();
+loadData();
+</script>
+</body>
+</html>
