@@ -109,8 +109,8 @@ path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed
 #08 - Biochimie - Réaliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:20.000,4,,1591,FALSE,
 #01 - Atelier de cuisine - Concevoir et réaliser des ateliers culinaires - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,99,5440,TRUE,2026-09-02T12:38:21.000
 #02 - Atelier de cuisine - Technique de dégustation - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,98,747,TRUE,2026-09-02T13:19:40.000
-#03 - Atelier de cuisine - Le matériel - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,0,,0,FALSE,
-#04 - Atelier de cuisine - Techniques culinaires - La préparation des fruits et légumes - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,0,,0,FALSE,
+#03 - Atelier de cuisine - Le matériel - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,100,100,0,TRUE,2026-11-09T17:00:00
+#04 - Atelier de cuisine - Techniques culinaires - La préparation des fruits et légumes - BTS D&N - Bloc 3,2026-06-26T14:01:19.100,100,0,TRUE,2026-11-09T17:00:00
 #05 - Atelier de cuisine - Techniques culinaires - Les différents types de liaisons - BTS D&N - Bloc 3,2026-06-26T14:01:19.000,0,,0,FALSE,
 #06 - Atelier de cuisine - Techniques culinaires - Les différents types de pâtes - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,0,,0,FALSE,
 #07 - Atelier de cuisine - Techniques culinaires - Les différents modes de cuisson - BTS D&N - Bloc 3,2026-06-26T14:01:18.000,0,,0,FALSE,
