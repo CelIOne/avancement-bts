@@ -1,3 +1,4 @@
+
 path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed,completion_date
 #01 - Physiopathologie -  Introduction physiopathologie- BTS D&N - Bloc 5,2026-06-26T14:01:24.000,100,99,6259,TRUE,2026-09-25T08:44:54.000
 #02 - Physiopathologie - Dénutrition - BTS Diététique - Bloc 5,2026-06-26T14:01:24.000,31,67,10714,FALSE,
@@ -124,7 +125,7 @@ path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed
 #02 - Aliments - Sécurité sanitaire - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,100,93,50968,TRUE,2026-09-29T11:26:39.000
 #03 - Aliments - Les familles d'aliments - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,100,400,TRUE,2026-09-29T11:33:59.000
 #04 - Aliments - Les produits laitiers - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,100,15879,TRUE,2026-10-19T16:18:36.000
-#05 - Aliments - VPO - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,50,1933,TRUE,2026-11-23T09:00:00:000
+#05 - Aliments - VPO - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,50,1933,TRUE,2026-11-23T09:00:000.00
 #06 - Aliments - Les corps gras - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
 #07 - Aliments - Tubercules, légumineuses et soja - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
 #08 - Aliments - Les céréales - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
