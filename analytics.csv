@@ -46,7 +46,7 @@ path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed
 #15 - Physiologie - Réaliser les exercices - BTS D&N - Bloc 5,2026-06-26T14:01:24.000,3,,2228,FALSE,
 #01 - Nutrition - Introduction à la nutrition - BTS D&N - Bloc 2,2026-06-26T14:01:16.000,100,90,17377,TRUE,2026-09-15T15:26:38.000
 #02 - Nutrition - Besoins nutritionnel de l'adulte - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,100,99,39670,TRUE,2026-10-21T16:10:23.000
-#03 - Nutrition - Besoins nutritionnels des enfants et ados - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,100,100,0,TRUE,2026-11-23T09:00:00:000
+#03 - Nutrition - Besoins nutritionnels des enfants et ados - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,100,100,0,TRUE,2026-11-23T09:00:00.000
 #04 - Nutrition - Besoins nutritionnels des sportifs - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,0,,0,FALSE,
 #05 - Nutrition - Besoins nutritionnels des personnes âgées - BTS D&N - Bloc 2,2026-06-26T14:01:17.000,0,,0,FALSE,
 #06 - Nutrition - Besoins nutritionnels des femmes enceintes et allaitantes - BTS D&N - Bloc 2,2026-06-26T14:01:18.000,0,,0,FALSE,
@@ -126,7 +126,7 @@ path_title,subscription_date,progress_pct,score_pct,total_time_seconds,completed
 #04 - Aliments - Les produits laitiers - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,100,15879,TRUE,2026-10-19T16:18:36.000
 #05 - Aliments - VPO - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,100,50,1933,TRUE,2026-11-23T09:00:00:000
 #06 - Aliments - Les corps gras - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
-#07 - Aliments - Tubercules, légumineuses et soja - BTS D&N - Bloc 2",2026-06-26T14:01:19.000,0,,0,FALSE,
+#07 - Aliments - Tubercules, légumineuses et soja - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
 #08 - Aliments - Les céréales - BTS D&N - Bloc 2,2026-06-26T14:01:19.000,0,,0,FALSE,
 #09 - Aliments - Les fruits et légumes - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
 #10 - Aliments - Les produits sucrés - BTS D&N - Bloc 2,2026-06-26T14:01:20.000,0,,0,FALSE,
